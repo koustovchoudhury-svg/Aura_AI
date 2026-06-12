@@ -1,0 +1,14 @@
+[tool.pytest.ini_options]
+testpaths = ["packages", "apps/api"]
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.black]
+line-length    = 100
+target-version = ["py311"]
+exclude        = "/(node_modules|.next|__pycache__)/"
+
+[tool.ruff]
+line-length = 100
+select      = ["E", "W", "F", "I"]
+ignore      = ["E501"]
